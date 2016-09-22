@@ -25,12 +25,14 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="card" ng-repeat="album in albums track by album.id">
-        <img style="background-image:url()" class="card-img-top" src="{{album.images[1].url}}"/>
-        <div class="card-block">
-          <h4 class="card-title">{{album.name}}</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a ng-click="getAlbumTracks(album.id)" class="btn btn-primary">{{buttonStatus}}</a>
-        </div>
+          <center>
+            <img style="background-image:url()" class="card-img-top" src="{{album.images[1].url}}"/>
+            <div class="card-block">
+              <h4 class="card-title">{{album.name}}</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a ng-click="getAlbumTracks(album.id)" class="btn btn-primary">{{buttonStatus}}</a>
+            </div>
+          </center>
       </div>
       </div>
       <div class="col-md-4"></div>
