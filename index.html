@@ -7,8 +7,11 @@
   </head>
   <body ng-app="myApp">
     <div ng-controller="SpCtrl">
+      <div class="jumbotron">
+        <input type="text" ng-model="artist" placeholder="search artist name" ng-keyup="searchArtist()"> <button class="btn btn-primary">Search</button>
+      </div>
   <center>
-    <input type="text" ng-model="artist" placeholder="search artist name" ng-keyup="searchArtist()"> <button class="btn btn-primary">Search</button>
+
     <div class="card" ng-repeat="album in albums track by album.id">
     <img style="background-image:url()" class="card-img-top" src="{{album.images[1].url}}"/>
     <div class="card-block">
