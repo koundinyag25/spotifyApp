@@ -7,7 +7,6 @@ app.controller('SpCtrl', ['$scope', '$http', function($scope, $http) {
    $scope.buttonStatus = "Play";
   $scope.searchArtist = function() {
     var q = $scope.artist;
-    console.log(q);
     if (event.keyCode == 13 || event.type =='click') {
       $http.get('https://api.spotify.com/v1/search', {
         params: {
