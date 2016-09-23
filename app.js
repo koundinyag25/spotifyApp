@@ -21,7 +21,7 @@ app.controller('SpCtrl', ['$scope', '$http', function($scope, $http) {
     }
   }
 
-  $scope.getAlbumTracks = function(id) {
+  $scope.getAlbumTracks = function(id,index) {
     $http.get('https://api.spotify.com/v1/albums/' + id).then(function(data) {
      $scope.tracks = data.data.tracks.items[0].preview_url;
      if(audioEle == null){
