@@ -29,7 +29,7 @@
       </div>
       <div class="col-md-4"></div>
       <div class="col-md-4">
-        <div class="card" ng-repeat="album in albums track by $index" ng-click="getAlbumTracks(album.id,index)" ng-class="{true:'activeClass'}[activeBtn == $index]">
+        <div class="card" ng-repeat="album in albums track by $index" ng-click="getAlbumTracks(album.id,$index)" ng-class="{true:'activeClass'}[activeBtn == $index]">
           <center>
             <img style="background-image:url()" class="card-img-top" src="{{album.images[1].url}}"/>
             <div class="card-block">
