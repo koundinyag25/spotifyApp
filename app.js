@@ -27,11 +27,11 @@ app.controller('SpCtrl', ['$scope', '$http', function($scope, $http) {
      if(audioEle == null){
         audioEle = new Audio(data.data.tracks.items[0].preview_url);
         audioEle.play();
-       $scope.buttonStatus = "Pause";
+       $scope.activeBtn = index;
        }else if(audioEle != null){
         audioEle.pause();
         audioEle = null;
-        $scope.buttonStatus = "Play";
+        $scope.activeBtn = null;
       }
     }).catch(function(error) {
       return error;
